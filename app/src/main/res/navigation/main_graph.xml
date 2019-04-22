@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.jin724.navigationtest.fragments.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.jin724.navigationtest.fragments.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+
+        <argument
+            android:name="id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="com.jin724.navigationtest.fragments.TestFragment"
+        android:label="TestFragment"
+        tools:layout="@layout/fragment_test">
+        <action
+            android:id="@+id/action_testFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+</navigation>
