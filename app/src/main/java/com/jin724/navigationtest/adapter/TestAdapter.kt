@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.jin724.navigationtest.databinding.ItemTestBinding
-import com.jin724.navigationtest.fragments.TestFragmentDirections
+import com.jin724.navigationtest.fragments.StraightFragmentDirections
 import com.jin724.navigationtest.viewmodel.TestViewModel
 import timber.log.Timber
 
@@ -33,12 +33,11 @@ class TestAdapter : BaseAdapter<TestModel>({ newItem, oldItem ->
         getItem(position)?.let {
             with(holder) {
                 bind(it, createClickListener { view ->
-                    val action = TestFragmentDirections.actionTestFragmentToDetailFragment(it.id)
+                    val action = StraightFragmentDirections.actionStraightFragmentToDetailFragment()
                     view.findNavController().navigate(action)
                 })
             }
         }
-
     }
 
 
@@ -93,6 +92,9 @@ abstract class BaseViewHolder<T : ViewDataBinding, H : IModel>(binding: T) :
     abstract fun bind(item: H, clickListener: View.OnClickListener)
 
 }
+
+
+
 
 class TestModel : IModel {
     var name: String = "default"

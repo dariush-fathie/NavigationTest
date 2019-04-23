@@ -41,7 +41,7 @@
             android:textSize="18sp"
             app:fontFamily="@font/roboto_light"
             app:name="@{viewModel.name}"
-            tools:text="@tools:sample/cities" />
+            tools:text="@tools:sample/full_names" />
 
     </LinearLayout>
 </layout>

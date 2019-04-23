@@ -12,7 +12,7 @@ import com.jin724.navigationtest.databinding.FragmentTestBinding
 import java.util.*
 
 
-class TestFragment : Fragment() {
+class StraightFragment : Fragment() {
 
     private lateinit var binding: FragmentTestBinding
 

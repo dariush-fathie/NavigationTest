@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/mainFragment"
-        android:title="Main Fragment" />
+        android:id="@+id/mainGroupFragment"
+        android:title="Main Group Fragment" />
 
     <item
-        android:id="@+id/testFragment"
-        android:title="Test Fragment" />
+        android:id="@+id/straightFragment"
+        android:title="Test Group Fragment" />
 
 </menu>
